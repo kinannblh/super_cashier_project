@@ -33,4 +33,50 @@ Modul ini memiliki beberapa feature requirements dengan flow berikut:
 ![Flowchart cashier (1)](https://user-images.githubusercontent.com/108425666/218265692-0999beea-c56a-4799-b383-08fa3c0202c1.jpeg)
 
 
+## Penjelasan Functions
 
+1. init ()
+</br>Method untuk inisiasi class Transaction
+</br>self.transaction (dict): Data akan disimpan dalam bentuk dictionary 
+
+2. add_items (nama_item, jumlah_item, harga_per_item)
+</br>Method untuk menambah item ke dalam daftar pesanan
+</br>Parameters:
+    </br>nama_item (str, key) = nama item yang dibeli, merupakan key dalam dictionary
+    </br>jumlah_item (int) = jumlah item yang dibeli
+    </br>harga_per_item (int) = harga satuan item yang dibeli
+
+3. update_item_name (nama_item, update_nama_item)
+ </br>Method untuk mengubah nama item yang sudah dimasukkan ke dalam daftar pesanan
+    </br>Parameters:
+    </br>nama_item (str)= nama item sebelum diganti, key lama
+    </br>nama_item_baru (str)= nama item baru, key baru
+
+4. update_item_qty (nama_item, update_jumlah_item)
+</br>Method untuk mengubah jumlah item yang sudah yang sudah dimasukkan ke dalam daftar pesanan
+    </br>Parameters:
+    </br>nama_item (str, key): nama item yang akan diubah jumlahnya
+    </br>update_jumlah_item (int): jumlah baru dari item yang dibeli 
+
+5. update_item_price (nama_item, update_harga_item)
+</br>Method untuk mengganti harga item pada item yang sudah dimasukkan dalam daftar pesanan
+    </br>Parameters:
+    </br>nama_item (string, key) = nama item yang ingin diubah harganya 
+    </br>update_harga_item (int) = harga baru dari item
+
+6. delete_item (nama_item)
+</br>Method untuk menghapus data nama item tertentu yang sudah dimasukkan ke dalam daftar pesanan
+    </br>Parameters:
+    </br>nama_item (str) = nama item yang datanya ingin dihapus
+
+7. reset_transaction()
+</br>Method untuk menghapus seluruh data yang sudah dimasukkan ke dalam daftar pesanan
+
+8. check_order()
+</br>Method untuk mengecek kesalahan pada input data dan menghasilkan semua data pesanan
+
+9. total_price()
+</br>Method untuk menghitung harga total yang harus dibayar
+
+## Test Case
+Dapat dilihat pada notebook Test_Case_Super_Cashier.ipynb
